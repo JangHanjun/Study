@@ -65,8 +65,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget memoBuilder() {
     return FutureBuilder(
       builder: (context, Snap) {
-        if (Snap.hasData == null) { //데이터가 없으면 아래 컨테이너 출력
-          //print('project snapshot data is: ${projectSnap.data}');
+        if (Snap.data.isEmpty) { //데이터가 없으면 아래 컨테이너 출력
           return Container(child: Text("메모를 추가해보세요"),);
         }
         return ListView.builder(
