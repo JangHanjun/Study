@@ -38,7 +38,7 @@ class _MyHomePageState extends State<MyHomePage> {
               context, CupertinoPageRoute(builder: (context) => EditPage()));
         },
         tooltip: ' + 메모추가  버튼을 눌러 새로운 메모를 추가해보세요!',
-        label: Text('메모추가'),
+        label: Text('메모'),
         icon: Icon(Icons.add),
       ),
     );
@@ -153,12 +153,14 @@ class _MyHomePageState extends State<MyHomePage> {
                           style: TextStyle(
                               fontSize: 20, fontWeight: FontWeight.w500
                           ),
+                          overflow: TextOverflow.ellipsis, //오버플로우시 ...으로 생략
                         ),
                         Text(
                           memo.text,
                           style: TextStyle(
                             fontSize: 20,
                           ),
+                          overflow: TextOverflow.ellipsis,
                         ),
                       ],
                     ),
