@@ -10,6 +10,7 @@ class EditPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       appBar: AppBar(
         actions: <Widget>[
           IconButton(
@@ -27,6 +28,7 @@ class EditPage extends StatelessWidget {
         child: Column(
           children: <Widget>[
             TextField(
+              maxLines: 2,
               onChanged: (String title){ this.title = title; }, //내용이 바뀌면 실행
               style: TextStyle(fontSize: 30, fontWeight: FontWeight.w500),
               decoration: InputDecoration(
@@ -37,7 +39,7 @@ class EditPage extends StatelessWidget {
             TextField(
               onChanged: (String text){ this.text = text; },
               keyboardType: TextInputType.multiline,
-              maxLines: null,
+              maxLines: 8,
               // keybordType부터 maxlines 설명 : 내용이 넘치면 밑으로 내려가게
               decoration: InputDecoration(
                 hintText: '메모의 내용을 적어주세요',
