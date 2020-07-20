@@ -67,6 +67,8 @@ class FirstPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('title'),
+        // 뒤로가기 버튼 
+        automaticallyImplyLeading: false,
       ),
     );
   }
